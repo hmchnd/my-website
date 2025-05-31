@@ -16,14 +16,42 @@
     .navbar img {
       height: 40px;
     }
-    .nav-links a {
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+    .nav-links a, .dropdown {
       color: white;
       text-decoration: none;
       margin: 0 12px;
       font-weight: bold;
+      position: relative;
     }
-    .nav-links a:hover {
+    .nav-links a:hover, .dropdown:hover {
       color: #00aced;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background-color: #333;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 4px;
+    }
+    .dropdown-content a {
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #444;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
   </style>
 </head>
@@ -33,6 +61,15 @@
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
+
+      <div class="dropdown">
+        <span>Our Features</span>
+        <div class="dropdown-content">
+          <a href="sap-consulting.html">SAP Consulting</a>
+          <a href="sap-staffing.html">SAP Staffing</a>
+        </div>
+      </div>
+
       <a href="products.html">Our Products</a>
       <a href="team.html">Our Team</a>
       <a href="career.html">Career</a>
