@@ -134,8 +134,8 @@
       height: 30px;
     }
 
-    /* Navbar */
-    .navbar {
+   /* Navbar Styles */
+     .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -149,7 +149,6 @@
   box-sizing: border-box; /* Prevents padding from overflowing */
 }
 
-
     .navbar img {
       height: 50px;
     }
@@ -157,12 +156,43 @@
     .nav-links {
       display: flex;
       gap: 20px;
+      align-items: center;
     }
 
-    .nav-links a {
+    .nav-links a,
+    .nav-links span {
       text-decoration: none;
       color: #000;
       font-weight: bold;
+    }
+
+     .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      color: #000;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
     }
 
       .site-footer {
@@ -219,9 +249,21 @@
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
-      <a href="sap-consulting.html">SAP Consulting</a>
-      <a href="sap-staffing.html">SAP Staffing</a>
-      <a href="products.html">Our Products</a>
+      <div class="dropdown">
+        <span>Our Features</span>
+        <div class="dropdown-content">
+          <a href="sap-consulting.html">SAP Consulting</a>
+          <a href="sap-staffing.html">SAP Staffing</a>
+        </div>
+      </div>
+     <div class="dropdown">
+        <span>Our Products</span>
+        <div class="dropdown-content">
+          <a href="product-micro-crm.html">Micro CRM</a>
+          <a href="product-inventory-management.html">Inventory Management</a>
+        </div>
+      </div>
+     
       <a href="team.html">Our Team</a>
       <a href="career.html">Career</a>
       <a href="contact.html">Contact Us</a>
