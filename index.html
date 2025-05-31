@@ -1,10 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raven Infotech</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #222;
+      padding: 10px 20px;
+    }
+    .navbar img {
+      height: 40px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+    .nav-links a:hover {
+      color: #00aced;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Raven Infotech</h1>
-  <p>This is a basic site hosted on GitHub Pages with a custom domain.</p>
+  <header class="navbar">
+    <img src="logo.png" alt="Raven Infotech Logo" />
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="products.html">Our Products</a>
+      <a href="team.html">Our Team</a>
+      <a href="career.html">Career</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main style="padding: 20px;">
+    <h1>Welcome to Raven Infotech</h1>
+    <p>Your future-ready tech partner.</p>
+  </main>
 </body>
 </html>
