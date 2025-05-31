@@ -13,18 +13,19 @@
     }
 
     /* Navbar Styles */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: #ffffff;
-      position: absolute;
-      width: 100%;
-      top: 0;
-      z-index: 10;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+     .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%; /* Use percentage instead of fixed px to keep padding responsive */
+  background-color: #ffffff;
+  position: fixed; /* Use fixed instead of absolute for better consistency */
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Prevents padding from overflowing */
+}
 
     .navbar img {
       height: 50px;
@@ -238,7 +239,7 @@
     <h2>Meet the Experts Behind Raven Infotech</h2>
     <div class="team-container">
       <div class="team-member">
-        <img src="images/team1.jpg" alt="Team Member 1">
+        <img src="images/Brijesh.jpg" alt="Team Member 1">
         <h3>Brijesh</h3>
         <p>Managing Director</p>
       </div>
@@ -248,7 +249,7 @@
         <p>Chief Technology Officer</p>
       </div>
       <div class="team-member">
-        <img src="images/team2.jpg" alt="Team Member 2">
+        <img src="images/Jyoti.jpg" alt="Team Member 2">
         <h3>Jyoti</h3>
         <p>Director Operations</p>
       </div>

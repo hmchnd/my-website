@@ -11,18 +11,20 @@
     }
 
     /* Navbar Styles */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: #ffffff;
-      position: absolute;
-      width: 100%;
-      top: 0;
-      z-index: 10;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+      .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%; /* Use percentage instead of fixed px to keep padding responsive */
+  background-color: #ffffff;
+  position: fixed; /* Use fixed instead of absolute for better consistency */
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Prevents padding from overflowing */
+}
+
 
     .navbar img {
       height: 50px;
