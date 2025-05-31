@@ -195,6 +195,20 @@
       background-color: #f0f0f0;
     }
 
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #000;
+      margin: 4px 0;
+    }
+
+
       .site-footer {
   background-color: #f9f9f9;
   padding: 30px 40px;
@@ -240,14 +254,69 @@
 .site-footer .social-icons svg:hover {
   transform: scale(1.15);
 }
-  </style>
+
+
+
+.floating-top-button {
+  position: fixed;
+  top: 500px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.floating-top-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+  @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero h1 {
+        font-size: 2em;
+      }
+    }
+</style>
+
+
    <link rel="icon" type="image/png" href="logo.png" />
 </head>
 <body>
-<!-- Navigation Bar -->
+ <!-- Navigation Bar -->
   <header class="navbar">
     <img src="logo.png" alt="Raven Infotech Logo" />
-    <nav class="nav-links">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <div class="dropdown">
@@ -264,12 +333,13 @@
           <a href="product-inventory-management.html">Inventory Management</a>
         </div>
       </div>
-     
       <a href="team.html">Our Team</a>
       <a href="career.html">Career</a>
       <a href="contact.html">Contact Us</a>
     </nav>
   </header>
+
+
   <section class="contact-section">
     <h2 class="contact-title">Have some questions?</h2>
     <div class="contact-container">
@@ -332,9 +402,26 @@
 
   </section>
 
+  <!-- Floating Meeting Scheduler Button -->
+<a href="https://calendly.com/raveninfotech97" 
+   target="_blank" 
+     class="floating-top-button"
+   title="Book a Meeting">
+  📅 Book a Meeting
+</a>
+
+
    <a class="whatsapp-float" href="https://wa.me/911234567890" target="_blank" title="Chat with us on WhatsApp">
     <img src="images/whatsapp.jpg" alt="WhatsApp" />
   </a>
+
+   <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('active');
+    }
+  </script>
+  
   <footer class="site-footer">
   <div class="footer-content">
     <p>© 2025 Raven Infotech. All rights reserved | <a href="#">Terms of Service</a> | <a href="#">Legal</a></p>
